@@ -3,7 +3,7 @@ October based on the Requests package to use the generator to achieve large file
 
 # Installation oct_requests
 ```commandline
-pip install https://github.com/StrongRoy/oct_requests.git
+pip install git+https://github.com/StrongRoy/oct_requests.git
 ```
 
 # Send get request
