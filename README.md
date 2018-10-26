@@ -1,8 +1,10 @@
 # Oct_requests
 October based on the Requests package to use the generator to achieve large file transfer
 
-# User oct_requests
+# Installation oct_requests
+```commandline
 pip install https://github.com/StrongRoy/oct_requests.git
+```
 
 # Send get request
 ```python
