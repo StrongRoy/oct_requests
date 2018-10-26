@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import pytest
-from .compat import urljoin
+from oct_requests.compat import urljoin
 
 
 def prepare_url(value):

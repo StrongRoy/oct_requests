@@ -153,11 +153,7 @@ class RequestEncodingMixin(object):
                     new_fields.append(
                         (field.decode('utf-8') if isinstance(field, bytes) else field,
                          v.encode('utf-8') if isinstance(v, str) else v))
-
-
-        res = encode_multipart_formdata(new_fields)
-        print res
-        head, content_type, boundary = res
+        head, content_type, boundary = encode_multipart_formdata(new_fields)
         files_heads = []
         for (k, fpath) in files:
             if not isinstance(fpath, str):

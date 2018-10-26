@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from .compat import is_py3
+from oct_requests.compat import is_py3
 
 
 try:
