@@ -32,3 +32,19 @@ preq = s.request("post", url, data=data,
 print preq.content
 
 ```
+
+# Multiple file transfer
+
+```python
+import oct_requests
+
+s = oct_requests.Session()
+
+
+
+url = 'http:127.0.0.1/uploadfile'
+preq = s.request("post", url, files={'files1': u'/Users/username/upload_file/test1.pdf',
+                                     'files2': u'/Users/username/upload_file/test2.pdf'})
+print preq.content
+
+```

@@ -14,5 +14,8 @@ data = {
 
 url = 'http:127.0.0.1/uploadfile'
 preq = s.request("post", url, data=data,
-                 files={'files': u'/Users/username/upload_file/test.pdf'})
+                 files={
+                     'files': u'/Users/username/upload_file/test.pdf',
+                 }
+                 )
 print preq.content
