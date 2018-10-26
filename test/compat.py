@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from richie_httplib.compat import is_py3
+from .compat import is_py3
 
 
 try:

@@ -320,6 +320,12 @@ class Session(SessionRedirectMixin):
         self.mount('http://', HTTPAdapter())
 
 
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *args):
+        self.close()
+
 
     def prepare_request(self,request):
         p = PreparedRequest()

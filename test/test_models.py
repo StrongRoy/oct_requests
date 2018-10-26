@@ -2,7 +2,7 @@
 # Created by richie at 2018/10/25
 
 
-import richie_httplib
+import oct_requests
 
 data = {
         "key": "value1",
@@ -12,9 +12,6 @@ data = {
         "key4": "value1",
     }
 
-req = richie_httplib.Request()
-# req.prepare_body({'files': u'../upload_file/你好.pdf'},data)
-
-req.prepare_headers({'User-Agent': 'Mozilla/5.0'})
+req = oct_requests.Request()
 
 print req.headers

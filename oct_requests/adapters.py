@@ -398,7 +398,8 @@ class HTTPAdapter(BaseAdapter):
         self.add_headers(request, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
 
         chunked = not (request.body is None or 'Content-Length' in request.headers)
-        generator = request.data is not None
+        generator = request.data.next()
+
         if isinstance(timeout, tuple):
             try:
                 connect, read = timeout

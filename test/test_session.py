@@ -2,18 +2,17 @@
 # Created by richie at 2018/10/25
 
 
-import richie_httplib
+import oct_requests
 
-s = richie_httplib.Session()
+s = oct_requests.Session()
 
 data = {
-    "conversion": "1",
-    "key": "toEq2v6A0Ym549U1",
-    "serial": "108692010",
+    "key": "123",
+    "key2": "123",
 }
 
 
-url = 'http://global.talk-cloud.net/WebAPI/uploadfile'
+url = 'http:127.0.0.1/uploadfile'
 preq = s.request("post", url, data=data,
-                 files={'files': u'/Users/richie/PycharmProjects/richie_test_project/talk_cloud/upload_file/test.pdf'})
+                 files={'files': u'/Users/username/upload_file/test.pdf'})
 print preq.content
