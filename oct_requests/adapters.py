@@ -469,8 +469,6 @@ class HTTPAdapter(BaseAdapter):
                     retries=self.max_retries,
                     timeout=timeout
                 )
-                print 'chunked',resp
-
             # Send the request.
             else:
                 if hasattr(conn, 'proxy_pool'):

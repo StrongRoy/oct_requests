@@ -455,7 +455,6 @@ class PreparedRequest(RequestEncodingMixin):
                 # If length exists, set it. Otherwise, we fallback
                 # to Transfer-Encoding: chunked.
                 self.headers['Content-Length'] = builtin_str(length)
-                print self.headers
 
         elif self.method not in ('GET', 'HEAD') and self.headers.get('Content-Length') is None:
             # Set Content-Length to 0 for methods that can have a body
