@@ -39,7 +39,7 @@ if sys.argv[-1] == 'publish':
     os.system('twine upload dist/*')
     sys.exit()
 
-packages = ['requests']
+packages = ['oct_requests']
 
 requires = [
     'chardet>=3.0.2,<3.1.0',
@@ -58,13 +58,13 @@ test_requirements = [
 ]
 
 about = {}
-with open(os.path.join(here, 'requests', '__version__.py'), 'r', 'utf-8') as f:
+with open(os.path.join(here, 'oct_requests', '__version__.py'), 'r', 'utf-8') as f:
     exec(f.read(), about)
 
 with open('README.md', 'r', 'utf-8') as f:
     readme = f.read()
-with open('HISTORY.md', 'r', 'utf-8') as f:
-    history = f.read()
+# with open('HISTORY.md', 'r', 'utf-8') as f:
+#     history = f.read()
 
 setup(
     name=about['__title__'],
